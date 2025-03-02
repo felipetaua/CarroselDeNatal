@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+:root {
+    --primary: #ff7f11;/*default: d41d1d*/
+    --secondary: #ff1b1c;/*default: 3f2323*/
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -11,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Tahoma, sans-serif;
-    background-image: linear-gradient(to bottom left, #d41d1d, #3f2323);
+    background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
 }
 
 .slides {
@@ -38,7 +43,15 @@ body {
     align-items: center;
     gap: 8px;
     width: 100%;
-    color: #d41d1d;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.prev-btn {
+    color: var(--secondary);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
@@ -70,7 +83,7 @@ img {
 }
 
 .button {
-    background-color: #d41d1d;
+    background-color: var(--secondary);
     color: #fff;
     width: 200px;
     height: 40px;
@@ -94,7 +107,7 @@ img {
 }
 
 .active, .dot:hover {
-    background-color: #d41d1d;
+    background-color: var(--secondary);
 }
 
 .fade {
